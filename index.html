@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Salar.dev — Web, Full-Stack & Software Developer</title>
+<meta name="description" content="Salar builds websites, web applications and business software that turn ideas into working products.">
+<meta name="theme-color" content="#14121a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="frames/d/001.webp" media="(min-width:821px)">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#home" aria-label="Salar.dev home">SALAR<span>.DEV</span></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+  <nav id="menu" aria-label="Primary">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- CINEMATIC HERO: tall scroll track, sticky canvas -->
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="stage">
+    <canvas id="seq" aria-hidden="true"></canvas>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="veil" id="veil" aria-hidden="true"></div>
+
+    <div class="copy" id="copyA">
+      <p class="eyebrow">Web · Full-Stack · Software</p>
+      <h1>Salar<span>.dev</span></h1>
+      <p class="lead">I build websites, web apps and business software that turn ideas into working products.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View My Work</a>
+        <a class="btn ghost" href="#contact">Let's Work Together</a>
+      </div>
+    </div>
+    <div class="copy late" id="copyB" aria-hidden="true">
+      <p class="eyebrow">Now building</p>
+      <p class="lead big">Quiet evenings. Careful code.</p>
+    </div>
+
+    <div class="cue" id="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+    <div class="bar" aria-hidden="true"><b id="bar"></b></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap two">
+    <div><p class="eyebrow">About</p><h2>Practical software, built with care.</h2></div>
+    <div class="prose">
+      <p>I build digital experiences, websites, and software that help businesses turn ideas into working products.</p>
+      <p>From the first conversation to launch and beyond, I focus on solutions that are clear, dependable and easy to maintain — across the frontend, the backend and everything that connects them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="expertise">
+  <div class="wrap">
+    <p class="eyebrow">Expertise</p><h2>What I can build for you</h2>
+    <ul class="grid">
+      <li><b>01</b><h3>Frontend Development</h3><p>Fast, accessible interfaces that feel considered on every screen size.</p></li>
+      <li><b>02</b><h3>Backend Development</h3><p>Reliable server logic, databases and APIs that stay out of the way.</p></li>
+      <li><b>03</b><h3>Full-Stack Web Apps</h3><p>End-to-end products, from data model to polished interface.</p></li>
+      <li><b>04</b><h3>Business Software &amp; Automation</h3><p>Internal tools and workflows that remove repetitive manual work.</p></li>
+      <li><b>05</b><h3>SaaS Products &amp; Web Tools</h3><p>Subscription-ready products and focused utilities for real users.</p></li>
+      <li><b>06</b><h3>Responsive Websites</h3><p>Sites that load quickly and read well on phones, tablets and desktops.</p></li>
+      <li><b>07</b><h3>APIs &amp; Integrations</h3><p>Connecting payments, CRMs and third-party services cleanly.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Selected projects</p><h2>Selected work</h2>
+    <p class="note">Placeholders — replace the entries in <code>PROJECTS</code> (main.js) with real projects, screenshots and links.</p>
+    <div class="projects" id="projects-list"></div>
+  </div>
+</section>
+
+<section class="sec alt" id="process">
+  <div class="wrap">
+    <p class="eyebrow">Process</p><h2>A straightforward workflow</h2>
+    <ol class="steps">
+      <li><b>1</b><h3>Understand</h3><p>Define the problem and who it is for.</p></li>
+      <li><b>2</b><h3>Plan</h3><p>Scope the solution and choose the right tools.</p></li>
+      <li><b>3</b><h3>Design &amp; build</h3><p>Ship working increments you can review early.</p></li>
+      <li><b>4</b><h3>Test &amp; refine</h3><p>Fix, polish and verify on real devices.</p></li>
+      <li><b>5</b><h3>Launch &amp; improve</h3><p>Go live, then keep improving from feedback.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Contact</p><h2>Have a project in mind?</h2>
+      <p class="prose">Tell me what you want to build. I'll reply with questions, ideas and a sensible next step.</p>
+      <p class="links" id="contact-links"></p>
+    </div>
+    <form id="form" novalidate>
+      <label>Name<input name="name" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Project details<textarea name="message" rows="5" required minlength="10"></textarea></label>
+      <button class="btn primary" type="submit">Send message</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap row">
+    <a class="brand" href="#home">SALAR<span>.DEV</span></a>
+    <nav aria-label="Footer"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    <span class="copy-r" id="social"></span>
+    <small>© <span id="yr"></span> Salar.dev</small>
+  </div>
+</footer>
+<noscript><style>.hero{height:100svh!important}.stage{background:url(frames/d/001.webp) 55% center/cover}</style></noscript>
+<script src="main.js"></script>
+</body>
+</html>
